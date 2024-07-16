@@ -37,7 +37,7 @@ function generateNotification(serv){
             {
                 console.log("Notifications are On")
                 var button = document.createElement("div");
-                button.innerHTML = '<div style = "background-color:black; color:white;top:10px;right:10px;position:absolute;z-index: 9999" id="message" ><p style="margin-left:8px;margin-right:8px;">Skipped Intro</p></div>';
+                button.innerHTML = '<div style = "background-color:black; color:white;top:10px;right:10px;position:absolute;z-index: 9999" id="message" ><p style="margin-left:8px;margin-right:8px;font-size:20px;">Skipped Intro</p></div>';
                 // button.style = "color:white;top:10px;right:10px;position:absolute;z-index: 9999"
                 document.body.appendChild(button);
                 setTimeout(disableNotification,4000);
@@ -122,57 +122,3 @@ else if (location.hostname == "www.disneyplus.com"){
 // }
 
 // https://github.com/sindresorhus/on-change
-
-
-
-
-
-// {/* <button class="fqye4e3 fovm8oe fez7z67 fektfsf fif0hcs f177tia9 fww9brl f1nxf0rp f1ylp05h atvwebplayersdk-skipelement-button f1cg7427 f989gul f1rjin6j f19qnh9o" style="padding: 0px 22px; line-height: normal; min-width: 0px;">Skip Intro</button> */}
-
-
-// chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
-//     console.log(response.farewell);
-    
-    
-//     document.arrive(".skip-credits",function(){
-//         // document.getElementsByClassName("nf-icon-button")[0].click();
-//         console.log("SKIP")
-//         console.log(document.querySelector('.ellipsize-text'));
-        
-    
-//     });
-//   });
-
-
-//   console.log(document.getElementsByClassName("ellipsize-text"));
-
-
-// chrome.runtime.onMessage.addListener(
-//     function(request, sender, sendResponse) {
-//       console.log(sender.tab ?
-//                   "from a content script:" + sender.tab.url :
-//                   "from the extension");
-//       if (request.greeting === "hello")
-//         sendResponse({farewell: "goodbye"});
-//     }
-//   );
-
-// document.arrive(".skip-credits",function(){
-//     // document.getElementsByClassName("nf-icon-button")[0].click();
-//     console.log("SKIP")
-//     console.log(document.querySelector('.ellipsize-text'));
-//     console.log(document.getElementsByClassName('ellipsize-text'));
-
-
-
-// });
-// console.log("Hello3")
-
-
-// function testFunc(st_time){
-//     console.log(st_time)
-//     console.log(document.getElementsByClassName('atvwebplayersdk-timeindicator-text')[0].textContent.split(" ")[0])
-
-//     console.log("Skipped Intro")
-//     generateNotification('Amazon');
-// }
