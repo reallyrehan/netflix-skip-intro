@@ -37,7 +37,7 @@ function generateNotification(serv){
             {
                 console.log("Notifications are On")
                 var button = document.createElement("div");
-                button.innerHTML = '<div style = "background-color:black; color:white;top:10px;right:10px;position:absolute;z-index: 9999" id="message" ><p style="margin-left:8px;margin-right:8px;">Skipped Intro</p></div>';
+                button.innerHTML = '<div style = "background-color:black; color:white;top:10px;right:10px;position:absolute;z-index: 9999" id="message" ><p style="margin-left:8px;margin-right:8px;font-size:20px;">Skipped Intro</p></div>';
                 // button.style = "color:white;top:10px;right:10px;position:absolute;z-index: 9999"
                 document.body.appendChild(button);
                 setTimeout(disableNotification,4000);
@@ -198,8 +198,13 @@ function skipAd(){
     
 
     if (location.hostname == "www.youtube.com"){
-        for(i=0;i<vid.length;i++){
-        vid[i].currentTime = vid[i].currentTime +10000;
+        if (document.querySelector('[id^=skip-button]')){
+            document.querySelector('[id^=skip-button]').click()
+        }
+        else {
+            for(i=0;i<vid.length;i++){
+                vid[i].currentTime = vid[i].currentTime +10000;
+                }
         }
     }
     else if (location.hostname == "www.peacocktv.com"){
